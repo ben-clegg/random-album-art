@@ -1,0 +1,42 @@
+{
+  "name": "random-album-art",
+  "version": "0.1.0",
+  "description": "A generator for \"random album art\" forum games",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenClegg/random-album-art.git"
+  },
+  "keywords": [
+    "random",
+    "album",
+    "art",
+    "express"
+  ],
+  "author": "Ben Clegg",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/BenClegg/random-album-art/issues"
+  },
+  "homepage": "https://github.com/BenClegg/random-album-art#readme",
+  "dependencies": {
+    "del": "^3.0.0",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-changed": "^3.1.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatten": "^0.3.1",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "pug": "^2.0.0-rc.4"
+  }
+}
