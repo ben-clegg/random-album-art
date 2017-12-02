@@ -4,6 +4,9 @@ var express = require('express');
 var path = require('path');
 var app = express();
 
+var wiki = require('./api/wikipedia')
+
+
 // configure Express
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'pug');
@@ -11,7 +14,14 @@ app.set('view engine', 'pug');
 app.use(express.static('dist'));
 app.listen(3000);
 
-// app.get('/', function (req, res) {
+wiki.get(function(title){
+  console.log(title);
+});
+
 app.get('/', function (req, res) {
-  res.render('index', { user: req.user });
+  wiki.get(function(artist) {
+
+    res.render('index', {albumArtist: artist});
+  });
+
 });
