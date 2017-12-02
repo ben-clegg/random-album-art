@@ -5,6 +5,7 @@ var path = require('path');
 var app = express();
 
 var wiki = require('./api/wikipedia')
+var quote = require('./api/wikiquote')
 
 
 // configure Express
@@ -14,14 +15,15 @@ app.set('view engine', 'pug');
 app.use(express.static('dist'));
 app.listen(3000);
 
-wiki.get(function(title){
+quote.get(function(title){
   console.log(title);
 });
 
 app.get('/', function (req, res) {
-  wiki.get(function(artist) {
-
-    res.render('index', {albumArtist: artist});
+  wiki.get(artist => {
+    quote.get(title => {
+      res.render('index', {albumArtist: artist, albumTitle: title});
+    });
   });
 
 });

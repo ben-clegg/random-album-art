@@ -4,7 +4,7 @@ block main
   div.result
     h2= `Artist: ${albumArtist}`
     
-    h2= `Title: `
+    h2!= `Title: ${albumTitle}`
     p (Use any part of this as your album's title.) 
     
     h2 Base Artwork:
