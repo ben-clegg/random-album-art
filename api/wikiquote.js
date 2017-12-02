@@ -1,6 +1,7 @@
 'use strict';
 
-var mwApi = require('nodemw');
+const mwApi = require('nodemw');
+const cheerio = require('cheerio');
 
 var client = new mwApi({
   protocol: 'https',
@@ -107,9 +108,9 @@ function getQuotesBlock(callback) {
   }).then(index => {
     console.log(`Quote section index: ${index}`);
     return quoteBlockFromIndex(index, pid)
-  }).then(html => {
-    if(html) {
-      var quotesBlock = html;
+  }).then(htmlObj => {
+    if(htmlObj) {
+      var quotesBlock = htmlObj;
       callback(quotesBlock);
     }
 
@@ -123,13 +124,23 @@ function get(callback) {
   getQuotesBlock(block => {
     // Will now have quote data in quotesBlock
     console.log(block);
-    callback(block['*']);
+    var quoteHtml = block['*'];
+    htmlToSingleQuote(quoteHtml).then(quote => {
+      callback(quote);
+    });
   });
 }
 
-function htmlToSingleQuote() {
+function htmlToSingleQuote(html) {
+  // Quotes are in li elements
   let promise = new Promise((resolve,refuse) => {
-
+    const $ = cheerio.load(html);
+    var q = $('ul').children().first().text();
+    if(q){
+      resolve(q);
+    } else {
+      reject('no quote');
+    }
   });
   return promise;
 }
