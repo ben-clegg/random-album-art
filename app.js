@@ -16,14 +16,19 @@ app.set('view engine', 'pug');
 app.use(express.static('dist'));
 app.listen(3000);
 
-photos.getPhoto(photoUrls => {
-  console.log(photoUrls);
-});
-
 app.get('/', function (req, res) {
   wiki.get(artist => {
     quote.get(title => {
-      res.render('index', {albumArtist: artist, albumTitle: title});
+      photos.get(photo => {
+        var params = {
+          albumArtist: artist,
+          albumTitle: title,
+          imgLink: photo.links.html,
+          imgSrc: photo.urls.regular
+        }
+        console.log(params);
+        res.render('index', params);
+      });
     });
   });
 

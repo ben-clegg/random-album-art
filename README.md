@@ -22,6 +22,10 @@ npm install -g gulp-cli
 gulp
 ```
 
+## Disclaimer
+
+This program was made in a short period of time, and therefore may not be stable. I am not responsible for any awful consequences of executing this application, or merely opening one of its files.
+
 ## Acknowledgements
 
 Thanks for [Rob Ede](https://github.com/robjtede) for helping me with some Javascript issues.

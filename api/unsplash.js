@@ -11,13 +11,14 @@ const unsplash = new unsplashLib({
 });
 
 module.exports = {
-  getPhoto: getPhoto
+  get: get
 };
 
-function getPhoto(callback) {
+function get(callback) {
   unsplash.photos.getRandomPhoto()
     .then(toJson)
     .then(json => {
-      callback(json.urls);
+      console.log(json);
+      callback(json);
     });
 }
