@@ -38,6 +38,7 @@
     "gulp-purifycss": "^0.2.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
+    "isomorphic-fetch": "^2.2.1",
     "nodemw": "^0.12.0",
     "pug": "^2.0.0-rc.4",
     "unsplash-js": "^4.7.0"

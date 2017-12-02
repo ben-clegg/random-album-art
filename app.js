@@ -6,6 +6,7 @@ var app = express();
 
 var wiki = require('./api/wikipedia')
 var quote = require('./api/wikiquote')
+var photos = require('./api/unsplash')
 
 
 // configure Express
@@ -15,8 +16,8 @@ app.set('view engine', 'pug');
 app.use(express.static('dist'));
 app.listen(3000);
 
-quote.get(function(title){
-  console.log(title);
+photos.getPhoto(photoUrls => {
+  console.log(photoUrls);
 });
 
 app.get('/', function (req, res) {
