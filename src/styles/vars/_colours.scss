@@ -1,18 +1,11 @@
-$main: #6F256F;
-$main-l1: lighten($main, 10%);
-$main-l2: lighten($main, 20%);
-$main-l3: lighten($main, 30%);
-$main-d1: darken($main, 10%);
-$main-d2: darken($main, 20%);
-$main-d3: darken($main, 30%);
+$dark: #222;
+$dark-l1: lighten($dark, 15%);
+$dark-l2: lighten($dark, 30%);
+$dark-d1: darken($dark, 15%);
+$dark-d2: darken($dark, 30%);
 
-$grey: #555;
-$grey-l1: lighten($grey, 10%);
-$grey-l2: lighten($grey, 20%);
-$grey-l3: lighten($grey, 30%);
-$grey-d1: darken($grey, 10%);
-$grey-d2: darken($grey, 20%);
-$grey-d3: darken($grey, 30%);
-
-$text-1: lighten($grey, 60%);
-$text-2: lighten($grey, 40%);
+$light: #ddd;
+$light-l1: lighten($light, 15%);
+$light-l2: lighten($light, 30%);
+$light-d1: darken($light, 15%);
+$light-d2: darken($light, 30%);

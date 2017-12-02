@@ -1,14 +1,64 @@
-.content-flex {
-    //flex-grow: 100;
-    color: $text-1;
+.content{
+    background-image: url('../images/bg_light.png');
+    width: 80%;
+    min-height: 100%;
     padding: 16px;
+    //flex-grow: 100;
+    color: $dark;
     //background-color: $grey-d2;
-    margin: 24px;
+    margin: 0 auto;
 
     h1 {
-      color: $main-l1;
+      font-size: 40pt;
+      color: $dark-d2;
+      margin-bottom: 16px;
     }
+    h2 {
+      font-size: 28pt;
+      color: $dark-d1;
+      margin-top: 28px;
+      i {
+        font-style: italic;
+      }
+    }
+
     p {
-      color: $text-1;
+      color: $dark;
     }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      margin-top: 16px;
+    }
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p.albumtitle {
+  color: $dark;
+  font-size: 20pt;
+  font-style: italic;
+  margin: 20px 32px;
+}
+
+p.info {
+  text-align: center;
+  color: $dark-l1;
+  padding: 8px;
+
+  a {
+    color: $dark-l1;
+    a:link, a:visited {
+        text-decoration: none;
+    }
+
+    a:hover, a:active {
+        text-decoration: underline;
+    }
+  }
 }

@@ -29,3 +29,5 @@ This program was made in a short period of time, and therefore may not be stable
 ## Acknowledgements
 
 Thanks for [Rob Ede](https://github.com/robjtede) for helping me with some Javascript issues.
+
+["Tweed"](https://www.toptal.com/designers/subtlepatterns/tweed/) and ["Paper Fibers"](https://www.toptal.com/designers/subtlepatterns/paper-fibers/) background images from [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/).

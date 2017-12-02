@@ -2,12 +2,14 @@ extends layout
 
 block main
   div.result
-    h2= `Artist: ${albumArtist}`
+    h2 Artist: 
+      i= `${albumArtist}`
     
-    h2= `Title: ${albumTitle}`
-    p (Use any part of this as your album's title.) 
+    h2 Title 
+    p.albumtitle= `${albumTitle}`
+    p.info (Use any part of this as your album's title.) 
     
-    h2 Base Artwork:
+    h2 Base Artwork
     a(href=imgLink)
       img(src=imgSrc)
-      p (Click to download.)
+      p.info (Click to download.)
